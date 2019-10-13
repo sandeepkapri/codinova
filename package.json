@@ -1,0 +1,33 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "description": "POS Assignment in React",
+  "main": "src/index.js",
+  "repository": "git@github.com:sandeepkapri/codinova.git",
+  "author": "Sandeep Kapri",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "node-sass": "^4.12.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "sass-loader": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development"
+  }
+}

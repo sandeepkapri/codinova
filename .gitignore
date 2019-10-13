@@ -1,0 +1,6 @@
+.vscode
+*.log
+*.error
+
+node_modules
+dist

@@ -1,0 +1,116 @@
+@import '../../styles/colors';
+
+.left-panel {
+    flex: 2;
+}
+
+.product-label {
+    display: flex;
+}
+
+.product-label div {
+    padding: .5rem;
+    flex: 1;
+}
+.added-products{
+    height: 400px;
+    overflow-y: scroll;
+}
+.no-product {
+    background: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.product-row {
+    display: flex;
+    background: #fff;
+    margin: .25rem 0;
+    padding: .5rem;
+}
+
+.product-row div {
+    flex: 1;
+}
+.tax-and-total{
+    margin: 1rem;
+}
+
+.tat-item {
+    display: flex;
+    border-top: 2px solid $color-5;
+}
+
+
+.tat-heading {
+    background: #f5f5f5;
+    padding: .5rem;
+    flex: 2;
+}
+
+.tat-data {
+    flex: 3;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+}
+.quantity-count {
+    width: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.pm-btn{
+    background: $color-6;
+    color: #fff;
+    padding: 0 .5rem;
+    border-radius: 5px;
+    margin: .25rem;
+    cursor: pointer;
+}
+.inp-grey{
+    background: $color-5;
+    border: none;
+    width: 6rem;
+    padding: .125rem .5rem;
+}
+.total-amount{
+    color: $color-7;
+    font-weight: bold;
+}
+.btn-wrapper{
+    display: flex;
+}
+.btn{
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    &-red{
+        background-color: $btn-red;
+        flex: 1;
+        margin-right: .5rem ;
+    }
+    &-green {
+        background-color: $btn-green;
+        flex: 1;
+      }
+}
+.close-btn{
+    background: $btn-red;
+    padding: 0 .4em;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 1rem;
+
+}
