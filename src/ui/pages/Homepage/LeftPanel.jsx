@@ -7,7 +7,8 @@ export class LeftPanel extends Component {
         super(props)
         this.defaultState = {
             vat: "",
-            discount: ""
+            discount: "",
+            modalOpen: false
         }
         this.state = this.defaultState;
         this.vatHandler = this.vatHandler.bind(this);
@@ -36,6 +37,13 @@ export class LeftPanel extends Component {
     }
     resetState() {
         this.setState(() => this.defaultState);
+    }
+    processSale() {
+        this.setState({ modalOpen: true })
+    }
+    closeModal() {
+        this.setState({ modalOpen: false })
+        this.resetState();
     }
 
     render() {
@@ -79,10 +87,60 @@ export class LeftPanel extends Component {
                 </div>
                 <div className="btn-wrapper">
                     <button className="btn btn-red" onClick={() => { this.props.cancelSale(); this.resetState(); }}>CANCEL SALE</button>
-                    <button className="btn btn-green">PROCESS SALE</button>
+                    <button className="btn btn-green" onClick={() => { this.processSale(); }}>PROCESS SALE</button>
                 </div>
-                
-            </div>
+                <div className={`modal-home ${this.state.modalOpen ? 'show-modal' : ''}`}>
+                    <div className="modal-receipt">
+                        <div className="receipt-head">Receipt</div>
+                        <div className="receipt-body">
+                            <div className="receipt-data">
+                                <div className="sale-no">Sale no.: 00102</div>
+                                <div className="date-col">{Date()}</div>
+                                <div className="data-1">
+                                    <div className="data-th-1">
+                                        <div>#</div>
+                                        <div>products</div>
+                                        <div>Quantity</div>
+                                        <div>SubTotal</div>
+                                    </div>
+
+                                    {
+                                        this.props.insertItem.map((item, ind) => (
+                                            <div className="data-tr-1">
+                                                <div>{ind}</div>
+                                                <div>{item.name}</div>
+                                                <div>{item.quantity}</div>
+                                                <div>{item.price} INR</div>
+                                            </div>
+
+                                        ))
+                                    }
+
+
+                                </div>
+                                <div className="data-2">
+                                    <div className="tr-2">
+                                        <div>Total Items</div>
+                                        <div>{this.calculateTotalQty()}</div>
+                                        <div>Total</div>
+                                        <div>{this.calculateTotal(this.props.subTotal)} INR</div>
+                                    </div>
+                                    <div className="tr-3">
+                                        <div>Discount</div>
+                                        <div>{this.state.vat} %</div>
+                                    </div>
+                                    <div className="tr-3">
+                                        <div>VAT</div>
+                                        <div>{this.state.discount} %</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button className="close-modal" onClick={() => { this.props.cancelSale(); this.closeModal() }}>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div >
         )
     }
 }
