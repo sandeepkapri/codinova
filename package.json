@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "POS Assignment in React",
   "main": "src/index.js",
+  "homepage": "https://sandeepkapri.github.io/codinova/",
   "repository": "git@github.com:sandeepkapri/codinova.git",
   "author": "Sandeep Kapri",
   "license": "ISC",
