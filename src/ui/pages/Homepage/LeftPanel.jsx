@@ -106,7 +106,7 @@ export class LeftPanel extends Component {
 
                                     {
                                         this.props.insertItem.map((item, ind) => (
-                                            <div className="data-tr-1">
+                                            <div className="data-tr-1" key={item.name}>
                                                 <div>{ind}</div>
                                                 <div>{item.name}</div>
                                                 <div>{item.quantity}</div>

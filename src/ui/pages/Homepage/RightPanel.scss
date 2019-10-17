@@ -1,3 +1,4 @@
+@import '../../styles/colors';
 .right-panel {
   flex: 3;
   margin-left: .25rem;
@@ -17,6 +18,11 @@
   text-align: center;
   color: #fff;
   border-radius: 10px;
+  &:hover{
+    .product-price,.product-category{
+      display: block;
+    }
+  } 
 }
 
 .product-image {
@@ -36,4 +42,12 @@
     width: 100px;
     height: 100px;
     background: rgba(54, 37, 209, .5);
+}
+@for $i from 1 through length($bg-color-list) { 
+  .bg-#{$i}{
+    background: nth($bg-color-list,$i);
+  }
+}
+.product-price, .product-category{
+  display: none;
 }
