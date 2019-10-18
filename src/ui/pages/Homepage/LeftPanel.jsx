@@ -50,10 +50,10 @@ export class LeftPanel extends Component {
         return (
             <div className="panel left-panel">
                 <div className="product-label">
-                    <div>PRODUCTS</div>
-                    <div>PRICE</div>
-                    <div>QUANTITY</div>
-                    <div>TOTAL</div>
+                    <div className="wide-div">PRODUCTS</div>
+                    <div className="fx-1">PRICE</div>
+                    <div className="fx-1">QUANTITY</div>
+                    <div className="fx-1">TOTAL</div>
                 </div>
                 <div className="added-products">
                     {

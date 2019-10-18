@@ -71,6 +71,7 @@ export class Homepage extends Component {
         this.state.products.map((item) => subTotal += parseInt(item.price)*item.quantity);
         return subTotal;
     }
+    
     cancelSale(){
         this.setState({
             products: [],

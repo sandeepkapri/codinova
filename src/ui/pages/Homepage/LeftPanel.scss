@@ -8,7 +8,11 @@
     display: flex;
 }
 
-.product-label div {
+.wide-div{
+    padding: .5rem;
+    flex: 2;
+}
+.fx-1{
     padding: .5rem;
     flex: 1;
 }
@@ -22,16 +26,6 @@
     padding: 2rem 1rem;
 }
 
-.product-row {
-    display: flex;
-    background: #fff;
-    margin: .25rem 0;
-    padding: .5rem;
-}
-
-.product-row div {
-    flex: 1;
-}
 .tax-and-total{
     margin: 1rem;
 }
@@ -57,21 +51,7 @@
     padding: 0 1rem;
 
 }
-.quantity-count {
-    display: inline-block;
-    width: 1.5rem;
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid;
-}
-.pm-btn{
-    background: $color-6;
-    color: #fff;
-    padding: 0 .5rem;
-    border-radius: 5px;
-    margin: .25rem;
-    cursor: pointer;
-}
+
 .inp-grey{
     background: $color-5;
     border: none;
@@ -101,17 +81,4 @@
         background-color: $btn-green;
         flex: 1;
       }
-}
-.close-btn{
-    background: $btn-red;
-    padding: 0 .4em;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    cursor: pointer;
-    margin: 0 1rem;
-
 }
